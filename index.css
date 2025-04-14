@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 43% 57%;
+    font-family: sans-serif;
+}
+
+.pane {
+    padding: 1rem;
+    overflow-y: auto;
+    border-right: 1px solid #ccc;
+}
+
+.pane:last-child {
+    border-right: none;
+}
+
+header, footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f0f0f0;
+}
+
+footer button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
