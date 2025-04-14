@@ -20,5 +20,5 @@ function finish() {
 // Load content on page load
 window.onload = function () {
     loadContent('first.html', 'main');
-    loadContent('homdat.htm', 'output');
+    loadContent('homdat.html', 'output');
 }

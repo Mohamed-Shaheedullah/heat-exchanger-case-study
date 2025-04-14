@@ -1,0 +1,5 @@
+<MAP NAME="close">
+<!--Picture ..\buttons\close.gif-->
+<!--Comment -->
+<AREA SHAPE="RECT" COORDS="0,0,100,35" HREF="javascript:void">
+</MAP>
