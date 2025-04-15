@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern JS Layout</title>
     <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            background-color: #B1F4FE;
+            font-size: 16px; /* Equivalent to BASEFONT SIZE=4 */
+        }
+
+        .objectives-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .objectives-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5em;
+        }
+
+        .objectives-list li img {
+            margin-right: 0.5em;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -12,8 +33,62 @@
     </header>
 
     <main>
-        <section id="main" class="pane">Loading first.html...</section>
-        <section id="output" class="pane">Loading homdat.html...</section>
+        <section id="main" class="pane">
+            <img src="../images/jm3.jpg" alt="Heat Exchanger">
+            <p></p>
+            <p></p>
+            <a href="intro.htm" id="continueLink">
+                <img src="buttons/continue.gif" alt="continue" width="100" height="35">
+            </a>
+            <p>
+            During this exercise you will:<P>
+            </p>
+            <ul class="objectives-list">
+             <li>
+              <img src="buttons/green_ba.gif" width="11" height="11" hspace="5" alt="">
+              <span>gain an understanding of materials selection methodology</span>
+             </li>
+             <li>
+              <img src="buttons/green_ba.gif" width="11" height="11" hspace="5" alt="">
+              <a href="homdat.html#questions">answer a series of questions on materials and properties</a>
+             </li>
+             <li>
+              <img src="buttons/green_ba.gif" width="11" height="11" hspace="5" alt="">
+              <span>predict failure mechanisms</span>
+             </li>
+             <li>
+              <img src="buttons/green_ba.gif" width="11" height="11" hspace="5" alt="">
+              <span>select materials for a specified environment</span>
+             </li>
+             <li>
+              <img src="buttons/green_ba.gif" width="11" height="11" hspace="5" alt="">
+              <span>see the effect of cost</span>
+             </li>
+            </ul>
+
+            <hr>
+
+            <section id="questions">
+             <h2 style="text-align: center;">Answering Questions</h2>
+             <p>The questions are of the following types:</p>
+             <ul>
+              <li>single selection from a list</li>
+              <li>multiple selections from a list</li>
+              <li>promote and demote points to an ordered list</li>
+             </ul>
+            </section>
+
+            <section id="method">
+             <p>The method of reaching the correct answer is the same for all:</p>
+             <ol>
+              <li>Make your initial selections then click the 'submit' button</li>
+              <li>The response will be for the <u>first</u> incorrect answer only</li>
+              <li>Change this answer then click 'submit' again</li>
+              <li>Repeat until all correct</li>
+             </ol>
+            </section>
+            <hr>
+        </section>
     </main>
 
     <footer>
