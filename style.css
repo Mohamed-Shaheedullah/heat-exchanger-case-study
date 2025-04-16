@@ -26,3 +26,27 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+.intro-container {
+  display: flex;
+}
+
+.intro-left-column {
+  width: 50%;
+  padding: 20px;
+}
+
+.intro-right-column {
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+}
+
+.intro-title {
+  text-align: center;
+}
+
+body {
+    background-color: #FFFF80;
+    font-size: 20px; /* Equivalent to BASEFONT SIZE=4 */
+}

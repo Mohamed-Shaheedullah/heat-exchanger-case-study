@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
     
         const rightColumn = document.getElementById('right-column');
+        rightColumn.innerHTML = '';
         const img = document.createElement('img');
         img.src = 'images/plant.gif';
         img.alt = 'Plant';
@@ -41,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('taskecon-link').addEventListener('click', function(event) {
         event.preventDefault();
         const rightColumn = document.getElementById('right-column');
+        rightColumn.innerHTML = '';
         const img = document.createElement('img');
         img.src = 'images/htschm.gif';
         img.alt = 'HTSCHM';
