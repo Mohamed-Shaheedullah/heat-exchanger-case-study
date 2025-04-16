@@ -17,11 +17,7 @@ function finish() {
     }
 }
 
-// Load content on page load
-// window.onload = function () {
-//     loadContent('first.html', 'main');
-//     loadContent('homdat.html', 'output');
-// }
+
 
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('tasknit-link').addEventListener('click', function(event) {
