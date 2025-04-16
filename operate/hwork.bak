@@ -1,0 +1,48 @@
+<HTML>
+
+<HEAD>
+<TITLE>Heat Exchangers</TITLE>
+<BASEFONT SIZE=4>
+</HEAD>
+
+<BODY BGCOLOR="#B1F4FE">
+
+<P>
+
+<H3>Description</H3>
+
+<TABLE BORDER>
+<TR>
+ <TD>
+  <IMG SRC="facade2.gif">
+ </TD>
+ <TD ROWSPAN=2>
+  <FONT SIZE=+1>A shell and tube heat exchanger is constructed of tubes that
+  are attached on each end by a plate that the tubes goes through
+  called a tube sheet.</FONT>
+ </TD>
+</TR>
+
+<TR>
+ <TD>
+  <IMG SRC="heatex3.jpg" WIDTH=200 HEIGHT=94>
+ </TD>
+ </TR>
+
+<TR>
+ <TD>
+  <IMG SRC="heatex1.jpg" WIDTH=175 HEIGHT=110>
+ </TD>
+
+ <TD>
+  <FONT SIZE=+1>The internal area where the tubes are located is enclosed by         a shell or enclosure.</FONT>
+ </TD> 
+
+<TR><TD colspan=2 align=center><A HREF="anim.htm">animation to illustrate operation</A></TD></TR>
+
+</TR>
+
+</TABLE>
+</BODY>
+
+</HTML>
