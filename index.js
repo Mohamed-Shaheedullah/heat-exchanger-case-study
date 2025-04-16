@@ -40,7 +40,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('taskecon-link').addEventListener('click', function(event) {
         event.preventDefault();
-        window.location.href = 'taskecon.htm';
+        const rightColumn = document.getElementById('right-column');
+        const img = document.createElement('img');
+        img.src = 'images/htschm.gif';
+        img.alt = 'HTSCHM';
+        rightColumn.appendChild(img);
+
+        const text = document.createElement('p');
+        text.textContent = "The economizer is a shell and tube heat exchanger. There are many components but the materials selection exercise will apply to the four labelled above."
+        rightColumn.appendChild(text);
     });
 
     document.getElementById('index-link').addEventListener('click', function(event) {
