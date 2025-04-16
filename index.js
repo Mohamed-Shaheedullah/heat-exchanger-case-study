@@ -26,7 +26,16 @@ function finish() {
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('tasknit-link').addEventListener('click', function(event) {
         event.preventDefault();
-        window.location.href = 'tasknit.htm';
+    
+        const rightColumn = document.getElementById('right-column');
+        const img = document.createElement('img');
+        img.src = 'images/plant.gif';
+        img.alt = 'Plant';
+        rightColumn.appendChild(img);
+
+        const text = document.createElement('p');
+        text.textContent = 'This is a general schematic of the plant. The particular component of interest is the economizer towards the right';
+        rightColumn.appendChild(text);
     });
 
     document.getElementById('taskecon-link').addEventListener('click', function(event) {
