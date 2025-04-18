@@ -1,0 +1,703 @@
+<HTML>
+<HEAD>
+<TITLE>
+Methodology order
+</TITLE>
+
+<BASEFONT SIZE=4>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function nextPage()
+{
+window.open("../methodol/over/servcon.htm",TARGET="output","toolbar=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes")
+}
+
+function backPage()
+{
+window.open("blank.htm",TARGET="output","toolbar=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes")
+}
+
+
+feed=""
+
+feedServCon="step 1 :The first consideration in this instance would be the service conditions as the primary factor in the selection process."
+
+feedServReq="step 2:Often this would be the first item, as the component must fulfil its function. In this case the service conditions partly define the requirements so this is second in the list."
+
+feedCandMat="step 3:After service conditions a list of candidate material groups can be drawn up, eg metals, polymers, ceramics."
+
+feedInitSuit="step 4:Initial suitability should be evaluated after a list of candidate material groups is known. Some of these groups may eliminated at an early stage"
+ 
+feedMaterialsResponse="step 5:Once the material groups have been narrowed, more detailed investigation can take place.  This would involve considering how materials respond to the environment"
+
+feedSelectSuit="step 6:Knowing how your candidate materials respond to the environment, the next step would be to select technically suitable materials"
+ 
+feedCost="step 7:Cost is of primary importance but chronologically, cost estimates may come at a later stage in the process.  Here, cost estimates can be made after suitable materials have been selected."
+
+feedFinalSelect="step 8:Final material selection can be made once all other stages have been executed."
+
+
+
+
+candTitle="candidate material groups"
+respTitle="response of materials to environment"
+servconTitle="service conditions"
+servreqTitle="service requirements"
+costTitle="cost estimates"
+initTitle="initial suitability"
+suitTitle="select suitable materials for parts"
+finalTitle="final materials selection"
+
+function candLight()
+{
+colourWhite()
+colour[candPlace]="aqua"
+showList()
+doc.document.close()
+}
+
+function respLight()
+{
+colourWhite()
+colour[respPlace]="aqua"
+showList()
+doc.document.close()
+}
+
+function servconLight()
+{
+colourWhite()
+colour[servconPlace]="aqua"
+showList()
+doc.document.close()
+}
+
+function servreqLight()
+{
+colourWhite()
+colour[servreqPlace]="aqua"
+showList()
+doc.document.close()
+}
+
+function costLight()
+{
+colourWhite()
+colour[costPlace]="aqua"
+showList()
+doc.document.close()
+}
+
+function initLight()
+{
+colourWhite()
+colour[initPlace]="aqua"
+showList()
+doc.document.close()
+}
+
+function suitLight()
+{
+colourWhite()
+colour[suitPlace]="aqua"
+showList()
+doc.document.close()
+}
+
+function finalLight()
+{
+colourWhite()
+colour[finalPlace]="aqua"
+showList()
+doc.document.close()
+}
+
+
+order=new Array(7)
+order[7]=candTitle
+order[6]=respTitle
+order[5]=servconTitle
+order[4]=servreqTitle
+order[3]=costTitle
+order[2]=initTitle
+order[1]=suitTitle
+order[0]=finalTitle
+
+
+candPlace=7
+respPlace=6
+servconPlace=5
+servreqPlace=4
+costPlace=3
+initPlace=2
+suitPlace=1
+finalPlace=0
+
+
+
+colour=new Array(7)					
+								
+function colourWhite()
+{								
+	for (i=0; i<=7; i++)
+								
+	{
+	colour[i]="white"					
+	}
+								
+}
+
+
+colourWhite()	
+
+
+showList()
+doc.document.close();
+
+
+function showList()
+{
+doc=window.open("",TARGET="output","toolbar=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes")
+
+doc.document.write('<TABLE border>')
+
+doc.document.write('<TR>','<TD BGCOLOR='+colour[7]+'>','<FONT SIZE=+1>',"1",'</TD>','<TD BGCOLOR='+colour[7]+'>','<FONT SIZE=+1>',order[7],'<FONT>','</TD>','</TR>')
+doc.document.write('<TR>','<TD BGCOLOR='+colour[6]+'>','<FONT SIZE=+1>',"2",'</TD>','<TD BGCOLOR='+colour[6]+'>','<FONT SIZE=+1>',order[6],'<FONT>','</TD>','</TR>')
+doc.document.write('<TR>','<TD BGCOLOR='+colour[5]+'>','<FONT SIZE=+1>',"3",'</TD>','<TD BGCOLOR='+colour[5]+'>','<FONT SIZE=+1>',order[5],'<FONT>','</TD>','</TR>')
+doc.document.write('<TR>','<TD BGCOLOR='+colour[4]+'>','<FONT SIZE=+1>',"4",'</TD>','<TD BGCOLOR='+colour[4]+'>','<FONT SIZE=+1>',order[4],'<FONT>','</TD>','</TR>')
+doc.document.write('<TR>','<TD BGCOLOR='+colour[3]+'>','<FONT SIZE=+1>',"5",'</TD>','<TD BGCOLOR='+colour[3]+'>','<FONT SIZE=+1>',order[3],'<FONT>','</TD>','</TR>')
+doc.document.write('<TR>','<TD BGCOLOR='+colour[2]+'>','<FONT SIZE=+1>',"6",'</TD>','<TD BGCOLOR='+colour[2]+'>','<FONT SIZE=+1>',order[2],'<FONT>','</TD>','</TR>')
+doc.document.write('<TR>','<TD BGCOLOR='+colour[1]+'>','<FONT SIZE=+1>',"7",'</TD>','<TD BGCOLOR='+colour[1]+'>','<FONT SIZE=+1>',order[1],'<FONT>','</TD>','</TR>')
+doc.document.write('<TR>','<TD BGCOLOR='+colour[0]+'>','<FONT SIZE=+1>',"8",'</TD>','<TD BGCOLOR='+colour[0]+'>','<FONT SIZE=+1>',order[0],'<FONT>','</TD>','</TR>')
+
+doc.document.write('</TABLE>')
+
+}
+
+
+function moveFactor(factorName,direct)
+
+{
+
+colourWhite()
+	
+if (factorName=="cand")
+	
+	{
+	if ((candPlace!=7 && direct=="up") || (candPlace!=0 && direct=="down"))
+		{
+		if (direct=="up")
+			{
+			findAdj(candPlace,"up")
+			candPlace=candPlace+1
+				
+			}		
+		else
+			{
+			findAdj(candPlace,"down")
+			candPlace=candPlace-1
+			}
+		colour[candPlace]="aqua"
+		order[candPlace]=candTitle
+		}
+	}
+
+
+
+if (factorName=="resp")
+	
+	{
+	if ((respPlace!=7 && direct=="up") || (respPlace!=0 && direct=="down"))
+		{
+		if (direct=="up")
+			{
+			findAdj(respPlace,"up")
+			respPlace=respPlace+1
+			}		
+		else
+			{
+			findAdj(respPlace,"down")
+			respPlace=respPlace-1
+			}
+		colour[respPlace]="aqua"
+		order[respPlace]=respTitle
+		}
+	}
+
+
+if (factorName=="servreq")
+	
+	{
+	if ((servreqPlace!=7 && direct=="up") || (servreqPlace!=0 && direct=="down"))
+		{
+		if (direct=="up")
+			{
+			findAdj(servreqPlace,"up")
+			servreqPlace=servreqPlace+1
+			}		
+		else
+			{
+			findAdj(servreqPlace,"down")
+			servreqPlace=servreqPlace-1
+			}
+		colour[servreqPlace]="aqua"
+		order[servreqPlace]=servreqTitle
+		}
+	}
+
+if (factorName=="servcon")
+	
+	{
+	if ((servconPlace!=7 && direct=="up") || (servconPlace!=0 && direct=="down"))
+		{
+		if (direct=="up")
+			{
+			findAdj(servconPlace,"up")
+			servconPlace=servconPlace+1
+			}		
+		else
+			{
+			findAdj(servconPlace,"down")
+			servconPlace=servconPlace-1
+			}
+		colour[servconPlace]="aqua"
+		order[servconPlace]=servconTitle
+		}
+	}
+
+
+if (factorName=="cost")
+	
+	{
+	if ((costPlace!=7 && direct=="up") || (costPlace!=0 && direct=="down"))
+		{
+		if (direct=="up")
+			{
+			findAdj(costPlace,"up")
+			costPlace=costPlace+1
+			}		
+		else
+			{
+			findAdj(costPlace,"down")
+			costPlace=costPlace-1
+			}
+		colour[costPlace]="aqua"
+		order[costPlace]=costTitle
+		}
+	}
+
+
+if (factorName=="init")
+	
+	{
+	if ((initPlace!=7 && direct=="up") || (initPlace!=0 && direct=="down"))
+		{
+		if (direct=="up")
+			{
+			findAdj(initPlace,"up")
+			initPlace=initPlace+1
+			}		
+		else
+			{
+			findAdj(initPlace,"down")
+			initPlace=initPlace-1
+			}
+		colour[initPlace]="aqua"
+		order[initPlace]=initTitle
+		}
+	}
+
+
+if (factorName=="suit")
+	
+	{
+	if ((suitPlace!=7 && direct=="up") || (suitPlace!=0 && direct=="down"))
+		{
+		if (direct=="up")
+			{
+			findAdj(suitPlace,"up")
+			suitPlace=suitPlace+1
+			}		
+		else
+			{
+			findAdj(suitPlace,"down")
+			suitPlace=suitPlace-1
+			}
+		colour[suitPlace]="aqua"
+		order[suitPlace]=suitTitle
+		}
+	}
+
+
+if (factorName=="final")
+	
+	{
+	if ((finalPlace!=7 && direct=="up") || (finalPlace!=0 && direct=="down"))
+		{
+		if (direct=="up")
+			{
+			findAdj(finalPlace,"up")
+			finalPlace=finalPlace+1
+			}		
+		else
+			{
+			findAdj(finalPlace,"down")
+			finalPlace=finalPlace-1
+			}
+	colour[finalPlace]="aqua"
+	order[finalPlace]=finalTitle
+		}
+	}
+
+showList()
+doc.document.close();
+
+}
+
+
+function findAdj(factorPlace,direc)
+
+{
+
+		if ((factorPlace+1==candPlace) && (direc=="up"))
+			{
+			candPlace=candPlace-1
+			order[candPlace]=candTitle
+			}
+		else
+			if ((factorPlace-1==candPlace) && (direc=="down")) 
+				{
+				candPlace=candPlace+1
+				order[candPlace]=candTitle
+				}
+
+		else		
+			if ((factorPlace+1==respPlace) && (direc=="up"))
+				{
+				respPlace=respPlace-1
+				order[respPlace]=respTitle
+				}
+		else
+			if ((factorPlace-1==respPlace) && (direc=="down")) 
+				{
+				respPlace=respPlace+1
+				order[respPlace]=respTitle
+				}
+
+		else
+			if ((factorPlace+1==servconPlace) && (direc=="up"))
+				{
+				servconPlace=servconPlace-1
+				order[servconPlace]=servconTitle
+				}
+		else
+			if ((factorPlace-1==servconPlace) && (direc=="down")) 
+				{
+				servconPlace=servconPlace+1
+				order[servconPlace]=servconTitle
+				}
+
+		else
+			if ((factorPlace+1==servreqPlace) && (direc=="up"))
+				{
+				servreqPlace=servreqPlace-1
+				order[servreqPlace]=servreqTitle
+				}
+		else
+			if ((factorPlace-1==servreqPlace) && (direc=="down")) 
+				{
+				servreqPlace=servreqPlace+1
+				order[servreqPlace]=servreqTitle
+				}
+
+		else
+			if ((factorPlace+1==costPlace) && (direc=="up"))
+				{
+				costPlace=costPlace-1
+				order[costPlace]=costTitle
+				}
+		else
+			if ((factorPlace-1==costPlace) && (direc=="down")) 
+				{
+				costPlace=costPlace+1
+				order[costPlace]=costTitle
+				}
+
+		else
+			if ((factorPlace+1==initPlace) && (direc=="up"))
+				{
+				initPlace=initPlace-1
+				order[initPlace]=initTitle
+				}
+		else
+			if ((factorPlace-1==initPlace) && (direc=="down")) 
+				{
+				initPlace=initPlace+1
+				order[initPlace]=initTitle
+				}
+
+		else
+			if ((factorPlace+1==suitPlace) && (direc=="up"))
+				{
+				suitPlace=suitPlace-1
+				order[suitPlace]=suitTitle
+				}
+		else
+			if ((factorPlace-1==suitPlace) && (direc=="down")) 
+				{
+				suitPlace=suitPlace+1
+				order[suitPlace]=suitTitle
+				}
+
+		else
+			if ((factorPlace+1==finalPlace) && (direc=="up"))
+				{
+				finalPlace=finalPlace-1
+				order[finalPlace]=finalTitle
+				}
+		else
+			if ((factorPlace-1==finalPlace) && (direc=="down")) 
+				{
+				finalPlace=finalPlace+1
+				order[finalPlace]=finalTitle
+				}
+
+
+}
+
+
+
+	/*-----------------------------------------------
+		Respond(theForm)()
+		
+		Description: response on incorrect anser
+		
+	----------------------------------------------- */
+	function Respond(theForm)
+	
+	{
+	colourWhite();
+	feedTitle=""
+	wrongAns=false
+	feed="correct"
+	
+	if (servconPlace!=7)
+ 	{
+	wrongAns=true
+  	feed=feedServCon; feedTitle=servconTitle
+	colour[servconPlace]="aqua"
+  	}
+	
+	if (servreqPlace!=6 && wrongAns!=true)
+
+	{
+	wrongAns=true
+   	feed=feedServReq; feedTitle=servreqTitle
+	colour[servreqPlace]="aqua"
+  	}
+
+	
+	if (candPlace!=5 && wrongAns!=true)
+	{
+	wrongAns=true
+   	feed=feedCandMat; feedTitle=candTitle
+	colour[candPlace]="aqua"
+  	}
+	
+	if (initPlace!=4  && wrongAns!=true)
+	{
+	wrongAns=true
+   	feed=feedInitSuit; feedTitle=initTitle
+	colour[initPlace]="aqua"
+  	}
+	
+	if (respPlace!=3  && wrongAns!=true)
+	{
+	wrongAns=true
+   	feed=feedMaterialsResponse; feedTitle=respTitle
+	colour[respPlace]="aqua"
+  	}
+   
+   if (suitPlace!=2  && wrongAns!=true)
+	{
+	wrongAns=true
+   	feed=feedSelectSuit; feedTitle=suitTitle
+	colour[suitPlace]="aqua"
+  	}
+      
+   if (costPlace!=1  && wrongAns!=true)
+	{
+	wrongAns=true
+   	feed=feedCost; feedTitle=costTitle
+	colour[costPlace]="aqua"
+  	}
+   
+   if (finalPlace!=0  && wrongAns!=true)
+	{
+	wrongAns=true
+   	feed=feedFinalSelect; feedTitle=finalTitle
+   	colour[finalPlace]="aqua"
+  	}
+	
+
+showList()
+doc=window.open("",TARGET="output","toolbar=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes")
+doc.document.write('<TABLE>','<TR>','<TD>','<FONT SIZE=+1>')
+doc.document.write("<P>",feedTitle,"<P>",feed)
+doc.document.write('<FONT>','</TR>','</TD>','</TABLE>')
+doc.document.close()
+}
+
+
+//-->
+</SCRIPT>
+
+
+</HEAD>
+
+
+
+<BODY BGCOLOR="#FFFF80">
+
+<TR>
+ <TD>
+ <B>Selection Methodology-part 2</B><BR>
+ Now, try and place the following factors in chronological order using the promote (P) and demote (D) buttons:
+ </TD>
+</TR>
+
+<TABLE border>
+<FORM NAME="order">
+
+<TR>
+ <TD>
+  <FONT SIZE=+1><A HREF="javascript:void(0)" onMouseOver="candLight()">candidate material groups</A></FONT>
+  </TD>
+ <TD>
+  <INPUT NAME="candUp" TYPE="button" VALUE="P" onClick='moveFactor("cand","up")';>
+ </TD>
+<TD>
+  <INPUT NAME="candDown" TYPE="button" VALUE="D" onClick='moveFactor("cand","down")';>
+ </TD>
+
+</TR>
+
+<TR>
+ <TD>
+  <FONT SIZE=+1><A HREF="javascript:void(0)" onMouseOver="respLight()">response of materials to environment</A></FONT>
+ </TD>
+ <TD>
+  <INPUT NAME="respUp" TYPE="button" VALUE="P" onClick='moveFactor("resp","up")';>
+ </TD>
+<TD>
+  <INPUT NAME="respDown" TYPE="button" VALUE="D" onClick='moveFactor("resp","down")';>
+ </TD>
+ 
+  
+ 
+</TR>
+
+<TR>
+ <TD><FONT SIZE=+1><A HREF="javascript:void(0)" onMouseOver="servreqLight()">service requirements</A></FONT></TD>
+
+ <TD>
+  <INPUT NAME="servreqUp" TYPE="button" VALUE="P" onClick='moveFactor("servreq","up")';>
+ </TD>
+<TD>
+  <INPUT NAME="servreqDown" TYPE="button" VALUE="D" onClick='moveFactor("servreq","down")';>
+ </TD>
+
+</TR>
+
+<TR>
+ <TD>
+  <FONT SIZE=+1><A HREF="javascript:void(0)" onMouseOver="servconLight()">service conditions</A></FONT>
+ </TD>
+ <TD>
+  <INPUT NAME="servconUp" TYPE="button" VALUE="P" onClick='moveFactor("servcon","up")';>
+ </TD>
+<TD>
+  <INPUT NAME="servconDown" TYPE="button" VALUE="D" onClick='moveFactor("servcon","down")';>
+ </TD>
+
+
+</TR>
+
+
+<TR>
+
+ <TD>
+ <FONT SIZE=+1><A HREF="javascript:void(0)" onMouseOver="costLight()">cost estimates</A></FONT>
+ </TD>
+ <TD>
+  <INPUT NAME="costUp" TYPE="button" VALUE="P" onClick='moveFactor("cost","up")';>
+ </TD>
+<TD>
+  <INPUT NAME="costDown" TYPE="button" VALUE="D" onClick='moveFactor("cost","down")';>
+ </TD>
+
+
+</TR>
+
+<TR>
+
+<TD>
+<FONT SIZE=+1><A HREF="javascript:void(0)" onMouseOver="initLight()">initial suitability</A></FONT>
+</TD>
+  <TD>
+  <INPUT NAME="initUp" TYPE="button" VALUE="P" onClick='moveFactor("init","up")';>
+ </TD>
+<TD>
+  <INPUT NAME="initDown" TYPE="button" VALUE="D" onClick='moveFactor("init","down")';>
+ </TD>
+
+
+</TR>
+
+
+<TR>
+ <TD>
+  <FONT SIZE=+1><A HREF="javascript:void(0)" onMouseOver="suitLight()">select suitable materials for parts</A></FONT>
+</TD>
+ <TD>
+  <INPUT NAME="suitUp" TYPE="button" VALUE="P" onClick='moveFactor("suit","up")';>
+ </TD>
+<TD>
+  <INPUT NAME="suitDown" TYPE="button" VALUE="D" onClick='moveFactor("suit","down")';>
+ </TD>
+
+
+</TR>
+
+<TR>
+
+
+<TR>
+<TD>
+<FONT SIZE=+1><A HREF="javascript:void(0)" onMouseOver="finalLight()">final materials selection</A></FONT>
+</TD>
+ <TD>
+  <INPUT NAME="finalUp" TYPE="button" VALUE="P" onClick='moveFactor("final","up")';>
+ </TD>
+<TD>
+  <INPUT NAME="finalDown" TYPE="button" VALUE="D" onClick='moveFactor("final","down")';>
+ </TD>
+
+
+</TR>
+
+</TABLE>
+<P>
+<CENTER>
+<INPUT TYPE="button" VALUE="submit" onClick="Respond(this.form)">
+
+</FORM>
+<A HREF="../methodol/methq.htm" onClick="backPage()"><IMG SRC="../buttons/back.gif" ALT="back"></A>
+
+<A HREF="../methodol/methtab.htm" onClick="nextPage()"><IMG SRC="../buttons/continue.gif" ALT="continue"></A>
+</CENTER>
+</BODY>
+
+</HTML>

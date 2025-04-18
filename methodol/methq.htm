@@ -1,0 +1,215 @@
+<HTML>
+<HEAD>
+  
+<title>Methodology questions</title>
+<SCRIPT LANGUAGE = "JavaScript">
+<!-- HIDE FROM OTHER BROWSERS
+
+function nextPage()
+{
+doc.document.close();
+}
+
+function backPage()
+{
+window.open("../operate/hwork.htm",TARGET="output","toolbar=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes")
+}
+
+
+
+//BEGIN initialize global vars
+
+feedTitle=""
+
+transportTitle="cost of transport of material"
+researchTitle="research and development"
+materialsResponseTitle="how the materials respond to the environment"
+costMaterialTitle="cost of material"
+servconTitle="service conditions"
+servreqTitle="service requirements"
+suitTitle="suitability of materials to requirements"
+typesTitle="consideration of material types"
+
+feedTransport="Cost of transport may be true for large projects eg construction of factory, but not with a heat exchanger."
+
+feedResearch="In-depth research and development would be more relevant to attain information on general properties rather than for an individual application such as this.  Laboratory simulations on the other hand may well be relevant."
+
+feedMaterialsResponse="Response of materials is actually very important and involves whether the material will excessively corrode or crack in service"
+
+feedCostMaterial="The cost of materials is an important issue as manufacture invariably takes place within a budget"
+
+feedServCon="Service conditions define the environment of the component and should be included."
+
+feedServReq="The requirements are of primary importance"
+
+feedSuitability="Consideration of initial suitability will allow us to narrow the groups of materials down without going into detail."
+
+feedTypes="Consideration of materials types eg metals,polymers, composites is an important early step.  In some applications certain groups of materials can be excluded at an early stage."
+
+//END initialize global vars
+
+function respond(theForm)
+{
+
+//BEGIN initialize local vars
+
+wrongAns=false
+
+//END initialize local vars
+
+
+//BEGIN this section checks answers
+
+feedTitle=""
+feed="correct"
+
+if (!theForm.materialResponse.checked)
+	{
+	wrongAns=true	// allows feed to set at FIRST wrong answer
+	feedTitle=materialsResponseTitle;
+	feed=feedMaterialsResponse;
+	}
+
+if (!theForm.costMaterial.checked && wrongAns!=true)
+	{
+	wrongAns=true
+	feed=feedCostMaterial;
+	feedTitle=costMaterialTitle
+	}
+
+if (!theForm.servCon.checked && wrongAns!=true)
+	{
+	wrongAns=true  
+	feed=feedServCon;
+	feedTitle=servconTitle;
+	}
+
+
+if (theForm.costTransport.checked && wrongAns!=true)
+	{
+	wrongAns=true  
+	feed=feedTransport;
+	feedTitle=transportTitle;
+	}
+
+if (!theForm.types.checked && wrongAns!=true)
+	{
+	wrongAns=true
+	feed=feedTypes;
+	feedTitle=typesTitle;
+	}
+
+if (theForm.research.checked==true && wrongAns!=true)
+	{
+	wrongAns=true
+	feed=feedResearch;
+	feedTitle=researchTitle;
+	}
+
+if (!theForm.servReq.checked && wrongAns!=true)
+	{
+	wrongAns=true  
+	feed=feedServReq;
+	feedTitle=servreqTitle;
+	}
+
+if (!theForm.suitability.checked && wrongAns!=true)
+	{
+	wrongAns=true  
+	feed=feedSuitability;
+	feedTitle=suitTitle;
+	}
+
+
+doc=window.open("","output",wrap="yes")
+doc.document.write('<TABLE>','<TR>','<TD>','<FONT SIZE=+1>')
+doc.document.write(feedTitle,"<P>",feed)
+doc.document.write('<FONT>','</TR>','</TD>','</TABLE>')
+doc.document.close();
+
+//END set feedback
+
+}
+
+
+
+// STOP HIDING FROM OTHER BROWSERS -->
+</SCRIPT>
+<BASEFONT SIZE=4>
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFF80">
+
+<H3 ALIGN="center">Selection Methodology-part 1</H3>
+
+Think about what factors may be important for the selection process.  Tick the ones that you would include
+
+<TABLE BORDER>
+
+<FORM>
+<TR>	<TD>
+	<FONT SIZE=+1>how the materials respond to the environment</FONT></TD>
+ 	<TD><INPUT TYPE ="checkbox" NAME="materialResponse" onMouseOver="resplight()"></TD>
+</TR>
+
+<TR>	<TD>
+	<FONT SIZE=+1>cost of material </FONT></TD>
+ 	<TD><INPUT TYPE="checkbox" NAME="costMaterial" ></TD>
+</TR>
+
+<TR>	<TD>
+	<FONT SIZE=+1>service conditions</FONT></TD>
+	<TD><INPUT TYPE="checkbox" NAME="servCon"></TD>
+</TR>
+
+<TR>
+	<TD>
+	<FONT SIZE=+1>cost of transport of material</FONT></TD>
+	<TD><INPUT TYPE="checkbox" NAME="costTransport"></TD>
+</TR>
+
+
+<TR>
+	<TD>
+	<FONT SIZE=+1>consideration of material types</FONT></TD>
+	<TD><INPUT TYPE="checkbox" NAME="types"></TD>
+</TR>
+
+
+<TR>
+	<TD>
+	<FONT SIZE=+1>research and development</FONT></TD>
+	<TD><INPUT TYPE="checkbox" NAME="research"></TD>
+</TR>
+
+<TR>
+	<TD>
+	<FONT SIZE=+1>service requirements</FONT></TD>
+	<TD><INPUT TYPE="checkbox" NAME="servReq"></TD>
+</TR>
+
+<TR>
+	<TD>
+	<FONT SIZE=+1>suitability of materials to requirements</FONT></TD>
+	<TD><INPUT TYPE="checkbox" NAME="suitability"></TD>
+</TR>
+
+</TABLE>
+
+<P>
+
+<CENTER>
+<INPUT TYPE="button" VALUE="submit" onClick="respond(this.form)";>
+
+</CENTER>
+
+</FORM>
+<CENTER>
+<A HREF="../operate/hwork1.htm" onClick="backPage()"><IMG SRC="../buttons/back.gif" ALT="back"></A>
+
+<A HREF="methq_2.htm" onClick="nextPage()"><IMG SRC="../buttons/continue.gif" ALT="continue"></A>
+</CENTER>
+</BODY>
+
+</HTML>
