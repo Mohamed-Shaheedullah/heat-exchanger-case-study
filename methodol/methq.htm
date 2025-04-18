@@ -121,11 +121,8 @@ if (!theForm.suitability.checked && wrongAns!=true)
 	}
 
 
-doc=window.open("","output",wrap="yes")
-doc.document.write('<TABLE>','<TR>','<TD>','<FONT SIZE=+1>')
-doc.document.write(feedTitle,"<P>",feed)
-doc.document.write('<FONT>','</TR>','</TD>','</TABLE>')
-doc.document.close();
+var feedbackDiv = document.getElementById("feedbackArea");
+feedbackDiv.innerHTML = '<TABLE><TR><TD><FONT SIZE=+1>' + feedTitle + "<P>" + feed + '</FONT></TR></TD></TABLE>';
 
 //END set feedback
 
@@ -146,6 +143,7 @@ doc.document.close();
 Think about what factors may be important for the selection process.  Tick the ones that you would include
 
 <TABLE BORDER>
+
 
 <FORM>
 <TR>	<TD>
@@ -197,8 +195,9 @@ Think about what factors may be important for the selection process.  Tick the o
 
 </TABLE>
 
-<P>
-
+<P></P>
+<DIV id="feedbackArea"></DIV>
+<P></P>
 <CENTER>
 <INPUT TYPE="button" VALUE="submit" onClick="respond(this.form)";>
 
