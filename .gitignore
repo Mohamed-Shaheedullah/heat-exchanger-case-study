@@ -109,6 +109,8 @@ Thumbs.db
 
 # ignore images directory
 /images
+*.jpg
+*.gif
 
 # --------------------------------------------------------
 # BEGIN Explictly Allowed Files (i.e. do NOT ignore these)
