@@ -157,24 +157,50 @@ showList()
 doc.document.close();
 
 
+// function showList()
+// {
+// doc=window.open("",TARGET="output","toolbar=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes")
+
+// doc.document.write('<TABLE border>')
+
+// doc.document.write('<TR>','<TD BGCOLOR='+colour[7]+'>','<FONT SIZE=+1>',"1",'</TD>','<TD BGCOLOR='+colour[7]+'>','<FONT SIZE=+1>',order[7],'<FONT>','</TD>','</TR>')
+// doc.document.write('<TR>','<TD BGCOLOR='+colour[6]+'>','<FONT SIZE=+1>',"2",'</TD>','<TD BGCOLOR='+colour[6]+'>','<FONT SIZE=+1>',order[6],'<FONT>','</TD>','</TR>')
+// doc.document.write('<TR>','<TD BGCOLOR='+colour[5]+'>','<FONT SIZE=+1>',"3",'</TD>','<TD BGCOLOR='+colour[5]+'>','<FONT SIZE=+1>',order[5],'<FONT>','</TD>','</TR>')
+// doc.document.write('<TR>','<TD BGCOLOR='+colour[4]+'>','<FONT SIZE=+1>',"4",'</TD>','<TD BGCOLOR='+colour[4]+'>','<FONT SIZE=+1>',order[4],'<FONT>','</TD>','</TR>')
+// doc.document.write('<TR>','<TD BGCOLOR='+colour[3]+'>','<FONT SIZE=+1>',"5",'</TD>','<TD BGCOLOR='+colour[3]+'>','<FONT SIZE=+1>',order[3],'<FONT>','</TD>','</TR>')
+// doc.document.write('<TR>','<TD BGCOLOR='+colour[2]+'>','<FONT SIZE=+1>',"6",'</TD>','<TD BGCOLOR='+colour[2]+'>','<FONT SIZE=+1>',order[2],'<FONT>','</TD>','</TR>')
+// doc.document.write('<TR>','<TD BGCOLOR='+colour[1]+'>','<FONT SIZE=+1>',"7",'</TD>','<TD BGCOLOR='+colour[1]+'>','<FONT SIZE=+1>',order[1],'<FONT>','</TD>','</TR>')
+// doc.document.write('<TR>','<TD BGCOLOR='+colour[0]+'>','<FONT SIZE=+1>',"8",'</TD>','<TD BGCOLOR='+colour[0]+'>','<FONT SIZE=+1>',order[0],'<FONT>','</TD>','</TR>')
+
+// doc.document.write('</TABLE>')
+
+// }
 function showList()
 {
-doc=window.open("",TARGET="output","toolbar=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes")
+    var outputDiv = document.getElementById("output");
+    if (!outputDiv) return;
 
-doc.document.write('<TABLE border>')
+    var html = '<table border>';
 
-doc.document.write('<TR>','<TD BGCOLOR='+colour[7]+'>','<FONT SIZE=+1>',"1",'</TD>','<TD BGCOLOR='+colour[7]+'>','<FONT SIZE=+1>',order[7],'<FONT>','</TD>','</TR>')
-doc.document.write('<TR>','<TD BGCOLOR='+colour[6]+'>','<FONT SIZE=+1>',"2",'</TD>','<TD BGCOLOR='+colour[6]+'>','<FONT SIZE=+1>',order[6],'<FONT>','</TD>','</TR>')
-doc.document.write('<TR>','<TD BGCOLOR='+colour[5]+'>','<FONT SIZE=+1>',"3",'</TD>','<TD BGCOLOR='+colour[5]+'>','<FONT SIZE=+1>',order[5],'<FONT>','</TD>','</TR>')
-doc.document.write('<TR>','<TD BGCOLOR='+colour[4]+'>','<FONT SIZE=+1>',"4",'</TD>','<TD BGCOLOR='+colour[4]+'>','<FONT SIZE=+1>',order[4],'<FONT>','</TD>','</TR>')
-doc.document.write('<TR>','<TD BGCOLOR='+colour[3]+'>','<FONT SIZE=+1>',"5",'</TD>','<TD BGCOLOR='+colour[3]+'>','<FONT SIZE=+1>',order[3],'<FONT>','</TD>','</TR>')
-doc.document.write('<TR>','<TD BGCOLOR='+colour[2]+'>','<FONT SIZE=+1>',"6",'</TD>','<TD BGCOLOR='+colour[2]+'>','<FONT SIZE=+1>',order[2],'<FONT>','</TD>','</TR>')
-doc.document.write('<TR>','<TD BGCOLOR='+colour[1]+'>','<FONT SIZE=+1>',"7",'</TD>','<TD BGCOLOR='+colour[1]+'>','<FONT SIZE=+1>',order[1],'<FONT>','</TD>','</TR>')
-doc.document.write('<TR>','<TD BGCOLOR='+colour[0]+'>','<FONT SIZE=+1>',"8",'</TD>','<TD BGCOLOR='+colour[0]+'>','<FONT SIZE=+1>',order[0],'<FONT>','</TD>','</TR>')
+    html += '<tr><td bgcolor="' + colour[7] + '"><font size="+1">1</font></td><td bgcolor="' + colour[7] + '"><font size="+1">' + order[7] + '</font></td></tr>';
+    html += '<tr><td bgcolor="' + colour[6] + '"><font size="+1">2</font></td><td bgcolor="' + colour[6] + '"><font size="+1">' + order[6] + '</font></td></tr>';
+    html += '<tr><td bgcolor="' + colour[5] + '"><font size="+1">3</font></td><td bgcolor="' + colour[5] + '"><font size="+1">' + order[5] + '</font></td></tr>';
+    html += '<tr><td bgcolor="' + colour[4] + '"><font size="+1">4</font></td><td bgcolor="' + colour[4] + '"><font size="+1">' + order[4] + '</font></td></tr>';
+    html += '<tr><td bgcolor="' + colour[3] + '"><font size="+1">5</font></td><td bgcolor="' + colour[3] + '"><font size="+1">' + order[3] + '</font></td></tr>';
+    html += '<tr><td bgcolor="' + colour[2] + '"><font size="+1">6</font></td><td bgcolor="' + colour[2] + '"><font size="+1">' + order[2] + '</font></td></tr>';
+    html += '<tr><td bgcolor="' + colour[1] + '"><font size="+1">7</font></td><td bgcolor="' + colour[1] + '"><font size="+1">' + order[1] + '</font></td></tr>';
+    html += '<tr><td bgcolor="' + colour[0] + '"><font size="+1">8</font></td><td bgcolor="' + colour[0] + '"><font size="+1">' + order[0] + '</font></td></tr>';
 
-doc.document.write('</TABLE>')
+    html += '</table>';
 
+    outputDiv.innerHTML = html;
 }
+
+window.onload = function() {
+    showList();
+}
+
+
 
 
 function moveFactor(factorName,direct)
@@ -352,7 +378,7 @@ if (factorName=="final")
 	}
 
 showList()
-doc.document.close();
+// doc.document.close();
 
 }
 
@@ -475,81 +501,152 @@ function findAdj(factorPlace,direc)
 		Description: response on incorrect anser
 		
 	----------------------------------------------- */
-	function Respond(theForm)
+// 	function Respond(theForm)
 	
-	{
-	colourWhite();
-	feedTitle=""
-	wrongAns=false
-	feed="correct"
+// 	{
+// 	colourWhite();
+// 	feedTitle=""
+// 	wrongAns=false
+// 	feed="correct"
 	
-	if (servconPlace!=7)
- 	{
-	wrongAns=true
-  	feed=feedServCon; feedTitle=servconTitle
-	colour[servconPlace]="aqua"
-  	}
+// 	if (servconPlace!=7)
+//  	{
+// 	wrongAns=true
+//   	feed=feedServCon; feedTitle=servconTitle
+// 	colour[servconPlace]="aqua"
+//   	}
 	
-	if (servreqPlace!=6 && wrongAns!=true)
+// 	if (servreqPlace!=6 && wrongAns!=true)
 
-	{
-	wrongAns=true
-   	feed=feedServReq; feedTitle=servreqTitle
-	colour[servreqPlace]="aqua"
-  	}
+// 	{
+// 	wrongAns=true
+//    	feed=feedServReq; feedTitle=servreqTitle
+// 	colour[servreqPlace]="aqua"
+//   	}
 
 	
-	if (candPlace!=5 && wrongAns!=true)
-	{
-	wrongAns=true
-   	feed=feedCandMat; feedTitle=candTitle
-	colour[candPlace]="aqua"
-  	}
+// 	if (candPlace!=5 && wrongAns!=true)
+// 	{
+// 	wrongAns=true
+//    	feed=feedCandMat; feedTitle=candTitle
+// 	colour[candPlace]="aqua"
+//   	}
 	
-	if (initPlace!=4  && wrongAns!=true)
-	{
-	wrongAns=true
-   	feed=feedInitSuit; feedTitle=initTitle
-	colour[initPlace]="aqua"
-  	}
+// 	if (initPlace!=4  && wrongAns!=true)
+// 	{
+// 	wrongAns=true
+//    	feed=feedInitSuit; feedTitle=initTitle
+// 	colour[initPlace]="aqua"
+//   	}
 	
-	if (respPlace!=3  && wrongAns!=true)
-	{
-	wrongAns=true
-   	feed=feedMaterialsResponse; feedTitle=respTitle
-	colour[respPlace]="aqua"
-  	}
+// 	if (respPlace!=3  && wrongAns!=true)
+// 	{
+// 	wrongAns=true
+//    	feed=feedMaterialsResponse; feedTitle=respTitle
+// 	colour[respPlace]="aqua"
+//   	}
    
-   if (suitPlace!=2  && wrongAns!=true)
-	{
-	wrongAns=true
-   	feed=feedSelectSuit; feedTitle=suitTitle
-	colour[suitPlace]="aqua"
-  	}
+//    if (suitPlace!=2  && wrongAns!=true)
+// 	{
+// 	wrongAns=true
+//    	feed=feedSelectSuit; feedTitle=suitTitle
+// 	colour[suitPlace]="aqua"
+//   	}
       
-   if (costPlace!=1  && wrongAns!=true)
-	{
-	wrongAns=true
-   	feed=feedCost; feedTitle=costTitle
-	colour[costPlace]="aqua"
-  	}
+//    if (costPlace!=1  && wrongAns!=true)
+// 	{
+// 	wrongAns=true
+//    	feed=feedCost; feedTitle=costTitle
+// 	colour[costPlace]="aqua"
+//   	}
    
-   if (finalPlace!=0  && wrongAns!=true)
-	{
-	wrongAns=true
-   	feed=feedFinalSelect; feedTitle=finalTitle
-   	colour[finalPlace]="aqua"
-  	}
+//    if (finalPlace!=0  && wrongAns!=true)
+// 	{
+// 	wrongAns=true
+//    	feed=feedFinalSelect; feedTitle=finalTitle
+//    	colour[finalPlace]="aqua"
+//   	}
 	
 
-showList()
-doc=window.open("",TARGET="output","toolbar=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes")
-doc.document.write('<TABLE>','<TR>','<TD>','<FONT SIZE=+1>')
-doc.document.write("<P>",feedTitle,"<P>",feed)
-doc.document.write('<FONT>','</TR>','</TD>','</TABLE>')
-doc.document.close()
-}
+// showList()
+// doc=window.open("",TARGET="output","toolbar=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes")
+// doc.document.write('<TABLE>','<TR>','<TD>','<FONT SIZE=+1>')
+// doc.document.write("<P>",feedTitle,"<P>",feed)
+// doc.document.write('<FONT>','</TR>','</TD>','</TABLE>')
+// doc.document.close()
+// }
+function Respond(theForm)
+{
+    colourWhite();
+    feedTitle = "";
+    wrongAns = false;
+    feed = "correct";
 
+    if (servconPlace != 7)
+    {
+        wrongAns = true;
+        feed = feedServCon; feedTitle = servconTitle;
+        colour[servconPlace] = "aqua";
+    }
+    else if (servreqPlace != 6)
+    {
+        wrongAns = true;
+        feed = feedServReq; feedTitle = servreqTitle;
+        colour[servreqPlace] = "aqua";
+    }
+    else if (candPlace != 5)
+    {
+        wrongAns = true;
+        feed = feedCandMat; feedTitle = candTitle;
+        colour[candPlace] = "aqua";
+    }
+    else if (initPlace != 4)
+    {
+        wrongAns = true;
+        feed = feedInitSuit; feedTitle = initTitle;
+        colour[initPlace] = "aqua";
+    }
+    else if (respPlace != 3)
+    {
+        wrongAns = true;
+        feed = feedMaterialsResponse; feedTitle = respTitle;
+        colour[respPlace] = "aqua";
+    }
+    else if (suitPlace != 2)
+    {
+        wrongAns = true;
+        feed = feedSelectSuit; feedTitle = suitTitle;
+        colour[suitPlace] = "aqua";
+    }
+    else if (costPlace != 1)
+    {
+        wrongAns = true;
+        feed = feedCost; feedTitle = costTitle;
+        colour[costPlace] = "aqua";
+    }
+    else if (finalPlace != 0)
+    {
+        wrongAns = true;
+        feed = feedFinalSelect; feedTitle = finalTitle;
+        colour[finalPlace] = "aqua";
+    }
+
+    showList();
+
+    var outputDiv = document.getElementById("output");
+    if (!outputDiv) return;
+
+    var feedbackHtml = '<table><tr><td><font size="+1">';
+    if(wrongAns) {
+        feedbackHtml += "<p><strong>" + feedTitle + "</strong></p><p>" + feed + "</p>";
+    } else {
+        feedbackHtml += "<p>Correct! Well done.</p>";
+    }
+    feedbackHtml += "</font></td></tr></table>";
+
+    // Append feedback below the list
+    outputDiv.innerHTML += feedbackHtml;
+}
 
 //-->
 </SCRIPT>
@@ -698,6 +795,11 @@ doc.document.close()
 
 <A HREF="../methodol/methtab.htm" onClick="nextPage()"><IMG SRC="../buttons/continue.gif" ALT="continue"></A>
 </CENTER>
+
+<div id="output" style="background: #eef; padding:10px; margin-top:20px;">
+	<!-- Ordered list and feedback will appear here -->
+  </div>
+
 </BODY>
 
 </HTML>
