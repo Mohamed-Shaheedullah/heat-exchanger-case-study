@@ -1,0 +1,76 @@
+<HTML>
+
+<HEAD>
+<BASEFONT SIZE=4>
+</HEAD>
+<BODY BGCOLOR="#B1F4FE">
+
+
+
+
+
+<TABLE BORDER>
+
+
+<TH><A NAME="schematic">Schematic of heat exchanger</A></TH> 
+
+<TH COLSPAN=2><B>inlet gas</B></TH>
+
+<TR>
+ 
+ <TD ROWSPAN=12><IMG SRC="heat3.gif" WIDTH=294 HEIGHT=450></TD>
+ <TD ALIGN=CENTER>N<SUB>2</SUB></TD>
+ <TD>65%</TD>
+ </TR>
+
+<TR>
+ <TD ALIGN=CENTER>H<SUB>2</SUB>O</TD>
+ <TD>15%</TD>
+ </TR>
+
+<TR>
+ <TD ALIGN=CENTER>NOx</TD>
+ <TD>13%</TD>
+ </TR>
+
+<TR>
+ <TD ALIGN=CENTER>O<SUB>2</SUB></TD>
+ <TD>7%</TD>
+ </TR>
+
+<TR>
+ <TD ALIGN=CENTER>NH<SUB>3</SUB></TD>
+ <TD>trace</TD>
+</TR>
+
+<TR>
+<TH COLSPAN=2><B>water</B></TH>
+<TH></TH>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER>Cl-</TD>
+<TD>10-20ppm</TD>
+</TR>
+
+
+<TR>
+<TD ALIGN=CENTER>O<SUB>2</SUB></TD>
+<TD>0.02 ppm</TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER>NaOH</TD>
+<TD>100-300 ppm</TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER>pH</TD>
+<TD>9.5 - 10</TD>
+</TR>
+</TABLE>
+
+
+</BODY>
+
+</HTML>

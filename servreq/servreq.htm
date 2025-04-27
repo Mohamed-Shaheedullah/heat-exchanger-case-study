@@ -1,0 +1,167 @@
+<HTML>
+
+<HEAD>
+
+<BASEFONT SIZE=4>
+
+<SCRIPT LANGUAGE = "JavaScript">
+<!-- HIDE FROM OTHER BROWSERS  
+
+function nextPage()
+{
+window.open("../candgrp/ceramics.htm",TARGET="output","toolbar=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes")
+}
+
+function backPage()
+{
+window.open("../servreq/heatop.htm",TARGET="output","toolbar=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes")
+}
+
+// BEGIN initialize variables to be used for answers
+
+condstand="THERMAL CONDUCTIVITY: thermal conductivity is important for the tubes.  The function of the heat exchanger is to transfer heat and the heat transfer coefficient is a function of thermal conductivity"
+
+strengstand="MECHANICAL STRENGTH: some mechanical strength is required for component stability and integrity but it is not of primary importance."
+
+strwtstand="STRENGTH TO WEIGHT RATIO: this factor is of little importance in this application."
+
+wearstand="WEAR RESISTANCE: erosion resistance can be important when a fluid contains hard particles, but these are not present in this instance.  The velocity of fluid flow can also affect erosion."
+
+corrstand="CORROSION RESISTANCE: considering that corrosives fluids may be present, this is significant.  The extent of the significance depends on the exact nature of the fluids in the system."
+
+
+// END initialize
+
+
+
+function respond(theForm)
+
+{
+
+//BEGIN check if good or bad answers
+
+wrongAns=false
+
+feed="correct"
+
+if (!theForm.conductivity[0].checked)
+	{
+	feed=condstand
+	wrongAns=true
+	}
+	
+if (!theForm.strength[1].checked && wrongAns==false)
+	{
+	feed=strengstand
+	wrongAns=true
+	}
+	
+if (!theForm.strwt[2].checked && wrongAns==false)
+	{
+	wrongAns=true
+	feed=strwtstand
+	}
+
+if (!theForm.wear[2].checked && wrongAns==false)
+	{
+	wrongAns=true
+	feed=wearstand
+	}
+
+if (!theForm.corrosion[0].checked && wrongAns==false)
+	{
+	wrongAns=true
+	feed=corrstand
+	}
+
+//END check answers
+	
+//BEGIN output response to frame
+
+doc=window.open("",TARGET="output","toolbar=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes")
+doc.document.write('<TABLE>','<TR>','<TD>','<FONT SIZE=+1>')
+doc.document.write(feed)
+doc.document.write('<FONT>','</TR>','</TD>','</TABLE>')
+doc.document.close()
+
+// END output response to frame
+
+
+} // END function
+
+// STOP HIDING FROM OTHER BROWSERS -->
+</SCRIPT>
+
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFF80">
+
+<H3><A NAME="Servreq">stage 2 : Service Requirements</A></H3>
+
+Look at the service conditions in the other window and then answer attach a level of importance for each factor below.
+
+<FORM METHOD="Post" NAME= "servform" >
+
+<P>
+<TABLE BORDER>
+<TR>
+<TH>property</TH><TH COLSPAN=3> importance </TH>
+</TR>
+
+<TR>
+<TH></TH><TH>very</TH><TH>some</TH><TH>none</TH>
+</TR>
+
+<TR>
+<TD>
+thermal conductivity (metallic)
+</TD> 
+<TD><INPUT TYPE="radio" NAME="conductivity"></TD>
+<TD><INPUT TYPE="radio" NAME="conductivity"></TD>
+<TD><INPUT TYPE="radio" NAME="conductivity"></TD>
+</TR>
+
+<TR><TD>mechanical strength</TD> 
+<TD><INPUT TYPE="radio" NAME="strength"></TD>
+<TD><INPUT TYPE="radio" NAME="strength"></TD>
+<TD><INPUT TYPE="radio" NAME="strength"></TD>
+</TR>
+
+
+<TR><TD>strength / weight ratio</TD>
+<TD><INPUT TYPE="radio" NAME="strwt"></TD>
+<TD><INPUT TYPE="radio" NAME="strwt"></TD>
+<TD><INPUT TYPE="radio" NAME="strwt"></TD>
+</TR>
+
+<TR><TD>wear resistance</TD> 
+<TD><INPUT TYPE="radio" NAME="wear"></TD>
+<TD><INPUT TYPE="radio" NAME="wear"></TD>
+<TD><INPUT TYPE="radio" NAME="wear"></TD>
+</TR>
+
+<TR><TD>corrosion resistance</TD> 
+<TD><INPUT TYPE="radio" NAME="corrosion"></TD>
+<TD><INPUT TYPE="radio" NAME="corrosion"></TD>
+<TD><INPUT TYPE="radio" NAME="corrosion"></TD>
+</TR>
+
+</TABLE>
+<P>
+
+<CENTER> 
+<INPUT NAME="resp" TYPE="button" VALUE="submit"  onClick="respond(this.form)";>
+</CENTER>
+
+</FORM>
+<P>
+
+<CENTER>
+<A HREF="../servreq/servcon.htm" onClick="backPage()"><IMG SRC="../buttons/back.gif" ALT="back" WIDTH=100 HEIGHT=35></A>
+
+<A HREF="../candgrp/candgrp.htm" onClick="nextPage()"><IMG SRC="../buttons/continue.gif" ALT="continue" WIDTH=100 HEIGHT=35></A>
+</CENTER>
+</BODY>
+
+</HTML>
