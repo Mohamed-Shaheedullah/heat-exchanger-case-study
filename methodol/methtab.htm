@@ -4,7 +4,7 @@
 
 <title>Methodology overview</title>
 <SCRIPT LANGUAGE = "JavaScript">
-<!-- HIDE FROM OTHER BROWSERS  
+<!-- HIDE FROM OTHER BROWSERS
 
 function nextPage()
 {
@@ -15,6 +15,73 @@ function backPage()
 {
 window.open("",TARGET="output","toolbar=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes")
 }
+
+function showServiceConditions() {
+  var container = document.getElementById('serviceConditionsContainer');
+  if (container) {
+    container.innerText = 'It is important to be aware of the conditions the component is to encounter. This may include stress on the component, corrosivity of the environment, and temperature.';
+  }
+}
+
+function showServiceRequirements() {
+  var container = document.getElementById('serviceConditionsContainer');
+  if (container) {
+    container.innerText = ''; // Clear previous message
+    container.innerText = 'The service requirements primarily depend on the function of the component but the nature of the environment also has a say. For example, an aeroplane wing should have a good strength to weight ratio and be resistant to atmospheric corrosion.';
+  }
+}
+
+function showCandidateMaterials() {
+  var container = document.getElementById('serviceConditionsContainer');
+  if (container) {
+    container.innerText = ''; // Clear previous message
+    container.innerText = 'It is logical to begin with groups of materials rather than individual materials. These groups can then be narrowed down.';
+  }
+}
+
+function showInitialSuitability() {
+  var container = document.getElementById('serviceConditionsContainer');
+  if (container) {
+    container.innerText = ''; // Clear previous message
+    container.innerText = 'By applying simple criteria the number of groups of materials can be rapidly reduced.';
+  }
+}
+
+function showResponseOfMaterials() {
+  var container = document.getElementById('serviceConditionsContainer');
+  if (container) {
+    container.innerText = ''; // Clear previous message
+    container.innerText = 'The remaining materials undergo further considerations. In a corrosion situation the primary concern is the response of the material to the environment. Does it crack or pit (could be catastrophic). Is excessive general corrosion possible?';
+  }
+}
+
+function showSelectMaterials() {
+  var container = document.getElementById('serviceConditionsContainer');
+  if (container) {
+    container.innerText = ''; // Clear previous message
+    container.innerText = 'We have now eliminated\n\n1 materials that do not perform required function\n\n2 materials that do not have adquate resistance to corrosion in this environment.\n\nThe remaining materials must be deemed suitable for the job.';
+  }
+}
+
+function showCostConsiderations() {
+  var container = document.getElementById('serviceConditionsContainer');
+  if (container) {
+    container.innerText = ''; // Clear previous message
+    container.innerText = 'A selection must be made from the remaining materials on the basis of cost. This may not simply be a case of choosing the cheapest material as other factors must be taken into acccount eg length of service, scrap value, cost of shutdown etc.';
+  }
+}
+
+function showFinalSelection() {
+  var container = document.getElementById('serviceConditionsContainer');
+  if (container) {
+    container.innerText = ''; // Clear previous message
+    container.innerText = 'Final selection of a material for each compononent.';
+  }
+}
+
+
+
+
 
 // STOP HIDING FROM OTHER BROWSERS -->
 </SCRIPT>
@@ -31,35 +98,35 @@ window.open("",TARGET="output","toolbar=no,directories=no,status=yes,menubar=no,
 <TH>stage</TH><TH>title</TH>
 <TR>
 <TD>1</TD>
-<TD ALIGN= center><A HREF="over/servcon.htm"><FONT SIZE=+1>service conditions</FONT></A></TD></TR>
+<TD ALIGN= center><A href="#" onclick="showServiceConditions(); return false;"><FONT SIZE=+1>service conditions</FONT></A></TD></TR>
 
 <TR>
 <TD>2</TD>
-<TD ALIGN= center><A HREF="over/servreq.htm"><FONT SIZE=+1>service requirements</FONT></A></TD></TR>
+<TD ALIGN= center><A href="#" onclick="showServiceRequirements(); return false;"><FONT SIZE=+1>service requirements</FONT></A></TD></TR>
 
 <TR>
 <TD>3</TD>
-<TD ALIGN= center><A HREF="over/candmat.htm"><FONT SIZE=+1>candidate materials</FONT></A></TD></TR>
+<TD ALIGN= center><A href="#" onclick="showCandidateMaterials(); return false;"><FONT SIZE=+1>candidate materials</FONT></A></TD></TR>
 
 <TR>
 <TD>4</TD>
-<TD ALIGN= center><A HREF="over/init.htm"><FONT SIZE=+1>initial suitability</FONT> </A></TD></TR> 
+<TD ALIGN= center><A href="#" onclick="showInitialSuitability(); return false;"><FONT SIZE=+1>initial suitability</FONT> </A></TD></TR>
 
 <TR>
 <TD>5</TD>
-<TD ALIGN= center><A HREF="over/resp.htm"><FONT SIZE=+1>response of materials to environment</FONT></A></TD></TR>
+<TD ALIGN= center><A href="#" onclick="showResponseOfMaterials(); return false;"><FONT SIZE=+1>response of materials to environment</FONT></A></TD></TR>
 
 <TR>
 <TD>6</TD>
-<TD ALIGN= center><A HREF="over/select.htm"><FONT SIZE=+1>select a number of suitable metals for each part</FONT></A></TD></TR>
+<TD ALIGN= center><A href="#" onclick="showSelectMaterials(); return false;"><FONT SIZE=+1>select a number of suitable metals for each part</FONT></A></TD></TR>
 
 <TR>
 <TD>7</TD>
-<TD ALIGN= center><A HREF="over/cost.htm"><FONT SIZE=+1>cost estimates</FONT></A></TD></TR>
+<TD ALIGN= center><A href="#" onclick="showCostConsiderations(); return false;"><FONT SIZE=+1>cost estimates</FONT></A></TD></TR>
 
 <TR>
 <TD>8</TD>
-<TD ALIGN= center><A HREF="over/matsel.htm"><FONT SIZE=+1>materials selection</FONT></A></TD></TR>
+<TD ALIGN= center><A href="#" onclick="showFinalSelection(); return false;"><FONT SIZE=+1>Final selection of a material for each component.</FONT></A></TD></TR>
 
 </TABLE>
 <BR>
@@ -67,6 +134,8 @@ window.open("",TARGET="output","toolbar=no,directories=no,status=yes,menubar=no,
 <A HREF="../methodol/methq_2.htm" TARGET="main" onClick="backPage()"><IMG SRC="../buttons/back.gif" ALT="back"></A>
 
 <A HREF="../servreq/servcon.htm" TARGET="main" onClick="nextPage()"><IMG SRC="../buttons/continue.gif" ALT="continue"></A>
-</body>
 </CENTER>
+<body>
+  <div id="serviceConditionsContainer" style="margin-top:20px; font-weight:bold;"></div>
+</body>
 </HTML>
